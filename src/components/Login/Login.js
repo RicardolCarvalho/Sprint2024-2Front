@@ -17,7 +17,7 @@ const Login = () => {
         console.log(JSON.stringify({ nome, senha }));
 
         try {
-            const response = await fetch('http://localhost:8080/gestores/login', {
+            const response = await fetch('https://backspring-c8b11eddeece.herokuapp.com/gestores/login', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ nome, senha }),

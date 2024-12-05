@@ -10,7 +10,7 @@ const ObsAluno = () => {
 
   const fetchObservacoes = async () => {
     try {
-      const response = await fetch(`http://localhost:8080/portfolios/${id}/observacoes`);
+      const response = await fetch(`https://backspring-c8b11eddeece.herokuapp.com/portfolios/${id}/observacoes`);
       if (!response.ok) {
         throw new Error('Erro ao buscar observações');
       }
@@ -27,7 +27,7 @@ const ObsAluno = () => {
       return;
     }
     try {
-      const response = await fetch(`http://localhost:8080/portfolios/${id}/observacoes`, {
+      const response = await fetch(`https://backspring-c8b11eddeece.herokuapp.com/portfolios/${id}/observacoes`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify([novaObservacao]),
@@ -46,7 +46,7 @@ const ObsAluno = () => {
 
   const deletarObservacao = async (observacao) => {
     try {
-        const response = await fetch(`http://localhost:8080/portfolios/${id}/observacoes`, {
+        const response = await fetch(`https://backspring-c8b11eddeece.herokuapp.com/portfolios/${id}/observacoes`, {
             method: 'DELETE',
             headers: {
                 'Content-Type': 'text/plain',

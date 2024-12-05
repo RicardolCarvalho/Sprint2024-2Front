@@ -13,7 +13,7 @@ const Laudos = () => {
   // Busca a lista de laudos
   const fetchLaudos = async () => {
     try {
-      const response = await fetch(`http://localhost:8080/laudos/${id}`);
+      const response = await fetch(`https://backspring-c8b11eddeece.herokuapp.com/laudos/${id}`);
       if (!response.ok) throw new Error('Erro ao buscar laudos.');
       const data = await response.json();
       setLaudos(data); // Atualiza a lista de laudos
@@ -35,7 +35,7 @@ const Laudos = () => {
 
     try {
       setLoading(true);
-      const response = await fetch(`http://localhost:8080/laudos/${id}`, {
+      const response = await fetch(`https://backspring-c8b11eddeece.herokuapp.com/laudos/${id}`, {
         method: 'POST',
         body: formData,
       });
@@ -104,7 +104,7 @@ const Laudos = () => {
                 <li key={laudo.id}>
                   {laudo.fileName}{' '}
                   <a
-                    href={`http://localhost:8080/laudos/id/${laudo.id}`}
+                    href={`https://backspring-c8b11eddeece.herokuapp.com/laudos/id/${laudo.id}`}
                     target="_blank"
                     rel="noopener noreferrer"
                   >

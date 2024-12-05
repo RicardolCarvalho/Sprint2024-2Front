@@ -13,7 +13,7 @@ const Alergicos = () => {
   useEffect(() => {
     const fetchSaude = async () => {
       try {
-        const response = await fetch(`http://localhost:8080/saude/${id}`);
+        const response = await fetch(`https://backspring-c8b11eddeece.herokuapp.com/saude/${id}`);
         if (!response.ok) throw new Error('Erro ao buscar os dados de saúde');
         const data = await response.json();
         setSaudeData(data);
@@ -40,7 +40,7 @@ const Alergicos = () => {
 
     try {
       setLoading(true);
-      const response = await fetch(`http://localhost:8080/saude/${id}`, {
+      const response = await fetch(`https://backspring-c8b11eddeece.herokuapp.com/saude/${id}`, {
         method: 'PUT',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(updatedSaude),

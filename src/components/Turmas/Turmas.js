@@ -12,7 +12,7 @@ const Turmas = () => {
 
   const fetchTurmas = async (queryParam = '') => {
     try {
-      const response = await fetch(`http://localhost:8080/turmas${queryParam}`);
+      const response = await fetch(`https://backspring-c8b11eddeece.herokuapp.com/turmas${queryParam}`);
       const data = await response.json();
       setTurmas(data);
     } catch (error) {
@@ -54,7 +54,7 @@ const Turmas = () => {
     formData.append('file', file);
 
     try {
-      const response = await fetch('http://127.0.0.1:5000/turmas', {
+      const response = await fetch('https://backflask-10b36f74b018.herokuapp.com/turmas', {
         method: 'POST',
         body: formData,
       });
@@ -63,7 +63,7 @@ const Turmas = () => {
       const jsonData = await response.json();
 
       // Chamada para a API Java
-      const javaResponse = await fetch('http://localhost:8080/turmas', {
+      const javaResponse = await fetch('https://backspring-c8b11eddeece.herokuapp.com/turmas', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(jsonData),
@@ -74,7 +74,7 @@ const Turmas = () => {
       alert('Turma cadastrada com sucesso na API Java!');
 
       // Chamada para a nova API Flask
-      const flaskResponse = await fetch('http://127.0.0.1:5000/atualizar-portfolio', {
+      const flaskResponse = await fetch('https://backflask-10b36f74b018.herokuapp.com/atualizar-portfolio', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(jsonData),

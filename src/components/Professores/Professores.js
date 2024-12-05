@@ -16,7 +16,7 @@ const Professores = () => {
       setError(null);
 
       try {
-        const response = await fetch('http://localhost:8080/professores');
+        const response = await fetch('https://backspring-c8b11eddeece.herokuapp.com/professores');
         if (!response.ok) {
           throw new Error(`Erro ao buscar dados: ${response.statusText}`);
         }
@@ -43,7 +43,7 @@ const Professores = () => {
     try {
       const updatedProfessor = { ...professor, ativo: !professor.ativo };
 
-      const response = await fetch(`http://localhost:8080/professores/${professor.id}`, {
+      const response = await fetch(`https://backspring-c8b11eddeece.herokuapp.com/professores/${professor.id}`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',

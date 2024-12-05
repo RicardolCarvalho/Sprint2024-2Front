@@ -11,7 +11,7 @@ const PerfilAluno = () => {
   // Função para buscar os dados do aluno
   const fetchAluno = async () => {
     try {
-      const response = await fetch(`http://localhost:8080/alunos/${id}`);
+      const response = await fetch(`https://backspring-c8b11eddeece.herokuapp.com/alunos/${id}`);
       const data = await response.json();
       setAluno(data);
 
@@ -25,7 +25,7 @@ const PerfilAluno = () => {
   // Função para buscar o portfólio pelo nome do aluno
   const fetchPortfolio = async (nomeAluno) => {
     try {
-      const response = await fetch(`http://localhost:8080/portfolios?nome=${nomeAluno}`);
+      const response = await fetch(`https://backspring-c8b11eddeece.herokuapp.com/portfolios?nome=${nomeAluno}`);
       const data = await response.json();
       setPortfolio(data[0]); // Corrige o acesso para pegar o primeiro objeto do array
     } catch (error) {

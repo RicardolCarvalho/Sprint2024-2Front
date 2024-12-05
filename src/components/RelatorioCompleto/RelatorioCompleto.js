@@ -13,7 +13,7 @@ const RelatorioCompleto = () => {
   console.log(id);
   const fetchPortfolio = async () => {
     try {
-      const response = await fetch(`http://localhost:8080/portfolios/${id}`);
+      const response = await fetch(`https://backspring-c8b11eddeece.herokuapp.com/portfolios/${id}`);
       const data = await response.json();
       setPortfolio(data);
       setLoading(false);
@@ -31,7 +31,7 @@ const RelatorioCompleto = () => {
     }
 
     try {
-      const url = `http://127.0.0.1:5000/relatorio_completo/${portfolio.nome}`; // Ajuste aqui para a URL correta
+      const url = `https://backflask-10b36f74b018.herokuapp.com/relatorio_completo/${portfolio.nome}`; // Ajuste aqui para a URL correta
       const response = await fetch(url);
 
       if (!response.ok) {

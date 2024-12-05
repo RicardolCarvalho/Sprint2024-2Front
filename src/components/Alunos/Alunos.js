@@ -19,7 +19,7 @@ const Alunos = () => {
   // Função para buscar a lista de alunos da API
   const fetchAlunos = async (queryParam = '') => {
     try {
-      const response = await fetch(`http://localhost:8080/alunos${queryParam}`);
+      const response = await fetch(`https://backspring-c8b11eddeece.herokuapp.com/alunos${queryParam}`);
       const data = await response.json();
       setAlunos(data);
     } catch (error) {
@@ -44,7 +44,7 @@ const Alunos = () => {
 
   const handleDelete = (id) => {
     if (window.confirm("Tem certeza que deseja deletar este aluno?")) {
-      fetch(`http://localhost:8080/alunos/${id}`, {
+      fetch(`https://backspring-c8b11eddeece.herokuapp.com/alunos/${id}`, {
         method: "DELETE",
       })
         .then((response) => {
@@ -89,7 +89,7 @@ const Alunos = () => {
 
     try {
       // 1. Enviar o arquivo para a API Flask
-      const flaskResponse = await fetch('http://localhost:5000/alunos', {
+      const flaskResponse = await fetch('https://backflask-10b36f74b018.herokuapp.com/alunos', {
         method: 'POST',
         body: formData,
       });
@@ -101,7 +101,7 @@ const Alunos = () => {
       const alunosAtualizados = await flaskResponse.json();
 
       // 2. Obter todos os alunos da API Java (GET)
-      const javaResponse = await fetch('http://localhost:8080/alunos');
+      const javaResponse = await fetch('https://backspring-c8b11eddeece.herokuapp.com/alunos');
       if (!javaResponse.ok) {
         throw new Error('Erro ao buscar alunos da API Java');
       }
@@ -121,7 +121,7 @@ const Alunos = () => {
         const id = nomeParaId[aluno.nome.toUpperCase()]; // Match por nome
         if (id) {
           // Chamar a API Java para atualizar
-          await fetch(`http://localhost:8080/alunos/${id}`, {
+          await fetch(`https://backspring-c8b11eddeece.herokuapp.com/alunos/${id}`, {
             method: 'PUT',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(aluno),

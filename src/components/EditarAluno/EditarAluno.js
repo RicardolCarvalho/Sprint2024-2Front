@@ -25,7 +25,7 @@ const EditarAluno = () => {
 useEffect(() => {
   const fetchAluno = async () => {
     try {
-      const response = await fetch(`http://localhost:8080/alunos/${id}`);
+      const response = await fetch(`https://backspring-c8b11eddeece.herokuapp.com/alunos/${id}`);
       if (!response.ok) throw new Error('Erro ao buscar dados do aluno');
       const data = await response.json();
       setAluno(data);
@@ -52,7 +52,7 @@ useEffect(() => {
   // Atualiza o nome no portfólio
   const handlePortfolioUpdate = async (nomeAntigo, nomeNovo) => {
     try {
-      const response = await fetch(`http://localhost:8080/portfolios/atualizar-nome-aluno`, {
+      const response = await fetch(`https://backspring-c8b11eddeece.herokuapp.com/portfolios/atualizar-nome-aluno`, {
         method: 'PUT',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ nomeAntigo, nomeNovo }),
@@ -72,7 +72,7 @@ useEffect(() => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch(`http://localhost:8080/alunos/${id}`, {
+      const response = await fetch(`https://backspring-c8b11eddeece.herokuapp.com/alunos/${id}`, {
         method: 'PUT',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(aluno),
@@ -82,7 +82,7 @@ useEffect(() => {
   
       // Chamada para atualizar o nome no Portfolio
       if (aluno.nome !== originalNome) {
-        const portfolioResponse = await fetch('http://localhost:8080/portfolios', {
+        const portfolioResponse = await fetch('https://backspring-c8b11eddeece.herokuapp.com/portfolios', {
           method: 'PUT',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({

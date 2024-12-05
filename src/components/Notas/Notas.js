@@ -12,7 +12,7 @@ const Notas = () => {
   // Função para buscar as notas e frequências
   const fetchNotasFrequencias = async () => {
     try {
-      const response = await fetch(`http://localhost:8080/portfolios/${id}/notas-frequencias`);
+      const response = await fetch(`https://backspring-c8b11eddeece.herokuapp.com/portfolios/${id}/notas-frequencias`);
       if (!response.ok) {
         throw new Error('Erro ao buscar notas e frequências');
       }

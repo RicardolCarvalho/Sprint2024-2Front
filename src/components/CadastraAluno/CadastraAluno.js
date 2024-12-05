@@ -30,7 +30,7 @@ const CadastraAluno = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch('http://localhost:8080/alunos', {
+      const response = await fetch('https://backspring-c8b11eddeece.herokuapp.com/alunos', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

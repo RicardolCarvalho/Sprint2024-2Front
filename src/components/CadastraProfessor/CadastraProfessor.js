@@ -32,7 +32,7 @@ const CadastraProfessor = () => {
         acumulo: formData.acumulo === "Sim",
       };
 
-      const response = await fetch("http://localhost:8080/professores", {
+      const response = await fetch("https://backspring-c8b11eddeece.herokuapp.com/professores", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

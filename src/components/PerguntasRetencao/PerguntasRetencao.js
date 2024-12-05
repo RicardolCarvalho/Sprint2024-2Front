@@ -27,7 +27,7 @@ const PerguntasRetencao = () => {
   useEffect(() => {
     const fetchPerguntas = async () => {
       try {
-        const response = await fetch(`http://localhost:8080/portfolios/${id}`);
+        const response = await fetch(`https://backspring-c8b11eddeece.herokuapp.com/portfolios/${id}`);
         if (!response.ok) throw new Error('Erro ao buscar perguntas do portfólio');
         const data = await response.json();
         if (data && data.perguntas) {
@@ -59,7 +59,7 @@ const PerguntasRetencao = () => {
     };
 
     try {
-      const response = await fetch(`http://127.0.0.1:5000/perguntas_retencao/${id}`, {
+      const response = await fetch(`https://backflask-10b36f74b018.herokuapp.com/perguntas_retencao/${id}`, {
         method: 'PUT',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(updatedPortfolio),
