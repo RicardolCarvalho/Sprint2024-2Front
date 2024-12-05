@@ -1,0 +1,93 @@
+/* Adicionando estilos para o container geral */
+.perfil-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #ffffff; /* Fundo claro */
+  padding: 100px;
+  min-height: 100vh; /* Altura total da página */
+}
+
+/* Cabeçalho com informações do aluno */
+.perfil-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 800px;
+  margin-bottom: 20px;
+}
+
+/* Título: Nome do Aluno e Turma */
+.nome-aluno {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+  font-family: 'Alata', sans-serif; /* Fonte Alata para o título */
+}
+
+.turma-aluno {
+  font-size: 1.2rem;
+  color: #000000;
+  font-family: 'Alata', sans-serif; /* Fonte Alata para a turma */
+}
+
+/* Estilo da tabela com os links */
+.tabela-container {
+  width: 100%;
+  max-width: 600px;
+  background-color: #e0e1dd; /* Fundo claro */
+  border-radius: 8px;
+  padding: 15px;
+}
+
+.tabela-itens {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.tabela-itens td {
+  padding: 10px;
+  text-align: center;
+  font-size: 1rem;
+  font-family: 'Carme', sans-serif; /* Fonte Carme para os textos */
+  background-color: white; /* Fundo branco */
+  border: 1px solid #ddd;
+}
+
+/* Links estilizados */
+.link-item {
+  display: block;
+  text-decoration: none;
+  color: #333;
+  background-color: #e0e1dd;
+  padding: 12px;
+  border-radius: 5px;
+  font-size: 1rem;
+  text-align: center;
+  font-family: 'Carme', sans-serif; /* Fonte Carme para os links */
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.link-item:hover {
+  background-color: #415a77;
+  color: white;
+  transform: scale(1.05); /* Efeito de aumento */
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .perfil-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nome-aluno,
+  .turma-aluno {
+    font-size: 1.2rem;
+  }
+
+  .tabela-container {
+    width: 100%;
+  }
+}

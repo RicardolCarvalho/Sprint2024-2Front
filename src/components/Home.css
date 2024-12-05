@@ -1,0 +1,141 @@
+/* Importação da fonte local */
+@font-face {
+  font-family: 'Alata';
+  src: url('../font/Alata/Alata-Regular.ttf') format('truetype');
+}
+
+/* Configuração principal do layout da página */
+.home-container {
+  display: flex;
+  min-height: 100vh; /* Garante altura total da tela */
+  background-color: #ffffff; /* Cor de fundo da página */
+}
+/* Configuração do conteúdo principal */
+.main-content {
+  flex: 1; /* Preenche o espaço restante */
+  margin-left: 250px; /* Espaço reservado para a sidebar */
+  padding: 20px; /* Espaçamento interno */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  box-sizing: border-box; /* Inclui padding na largura total */
+}
+
+/* Mensagem de boas-vindas */
+.welcome-message {
+  width: 85%;
+  max-width: 900px; /* Limita a largura máxima do conteúdo */
+  padding: 40px;
+  background-color: #E0E1DD; /* Fundo branco */
+  color: #000; /* Texto preto */
+  font-family: 'Alata', sans-serif; /* Fonte Alata */
+  text-align: center;
+  border-radius: 8px; /* Bordas arredondadas */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  margin-bottom: 20px; /* Espaço entre o conteúdo e os próximos elementos */
+}
+
+/* Caixa de descrição */
+.description-box {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #333;
+  text-align: justify;
+  margin-top: 10px;
+}
+
+/* Configuração para o container de anos */
+.years-container {
+  width: 100%;
+  max-width: 900px; /* Largura máxima */
+  padding: 20px;
+  background-color: #E0E1DD;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Título "Anos" */
+.years-title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #000;
+  text-align: center; /* Alinha no centro horizontal */
+  width: 100%; /* Garante que ocupe toda a largura disponível */
+  margin: 20px 0; /* Espaçamento acima e abaixo */
+  font-family: 'Alata', sans-serif;
+  position: relative; /* Permite ajustar o deslocamento sem afetar a responsividade */
+}
+
+
+/* Estilo para o scroll dos anos */
+.scrollable-years {
+  display: flex;
+  flex-direction: column;
+  gap: 10px; /* Espaçamento entre os botões de anos */
+}
+
+/* Configuração de cada ano */
+.year-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.year-button {
+  width: 100%;
+  padding: 10px;
+  background-color: #778DA9; /* Cor do botão */
+  color: #FFFFFF; /* Texto branco */
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  text-align: center;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.year-button:hover {
+  background-color: #556B87; /* Cor ao passar o mouse */
+}
+
+.year-button.active {
+  background-color: #415A77; /* Cor quando está ativo */
+  font-weight: bold;
+}
+
+/* Configuração da lista de turmas */
+.classes-container {
+  margin-top: 10px;
+  background-color: #E0E1DD;
+  border-radius: 4px;
+  padding: 10px;
+}
+
+.scrollable-classes {
+  max-height: 150px; /* Altura máxima da lista de turmas */
+  overflow-y: auto; /* Scroll apenas vertical */
+}
+
+.class-item {
+  padding: 5px 10px;
+  background-color: #FFFFFF;
+  margin-bottom: 5px;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Botão para adicionar ano */
+.add-year-button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #415A77;
+  color: #FFFFFF;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.add-year-button:hover {
+  background-color: #2F3E56;
+}

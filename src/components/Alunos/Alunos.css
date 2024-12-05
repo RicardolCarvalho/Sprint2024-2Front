@@ -1,0 +1,211 @@
+/* Layout principal */
+.alunos-container {
+  display: flex;
+  min-height: 100vh;
+  background-color: #f9f9f9; /* Cor de fundo */
+}
+
+/* Sidebar */
+.sidebar {
+  width: 260px; /* Largura fixa para a sidebar */
+  background-color: #415A77;
+  height: 100vh; /* Preenche toda a altura da janela */
+  position: fixed; /* Sidebar fixa na lateral */
+  top: 0;
+  left: 0;
+  z-index: 1000; /* Garante que fique acima do conteúdo */
+  padding: 20px;
+  color: white;
+  overflow-y: auto; /* Adiciona rolagem vertical, se necessário */
+}
+
+/* Conteúdo principal */
+.alunos-wrapper {
+  flex: 1;
+  margin-left: 260px; /* Compensa a largura da sidebar */
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.alunos-content {
+  width: 100%; /* Ocupa toda a largura disponível */
+  max-width: 1200px; /* Define um limite máximo de largura */
+  background: white;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para destaque */
+}
+
+/* Título */
+.alunos-content h2 {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 20px;
+  text-align: center; /* Centraliza o título */
+}
+
+/* Filtros de busca */
+.search-controls {
+  display: flex;
+  flex-wrap: wrap; /* Permite que os itens quebrem linha em telas pequenas */
+  gap: 10px; /* Espaçamento entre os filtros */
+  margin-bottom: 20px;
+}
+
+.search-type {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  height: 40px;
+}
+
+.search-box {
+  flex: 1; /* Expande para ocupar o espaço restante */
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  min-width: 200px;
+  margin-top: 2px; /* Adiciona um espaço acima, ajustando a posição vertical */
+}
+
+.search-button {
+  padding: 10px 20px;
+  background-color: #415A77;
+  color: white;
+  height: 40px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.search-button:hover {
+  background-color: #778DA9;
+}
+
+/* Tabela de alunos */
+.alunos-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra leve */
+}
+
+.alunos-table th,
+.alunos-table td {
+  border: 1px solid #ddd;
+  padding: 12px;
+  text-align: left;
+}
+
+.alunos-table th {
+  background-color: #415A77;
+  color: white;
+}
+
+.alunos-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+/* Botões */
+.atualizar-button,
+.cadastrar-button {
+  padding: 10px 20px;
+  background-color: #415A77;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 20px;
+}
+
+.atualizar-button:hover,
+.cadastrar-button:hover {
+  background-color: #778DA9;
+}
+
+.cadastrar-button {
+  display: block;
+  margin: 0 auto; /* Centraliza o botão de cadastrar */
+}
+
+/* Popup */
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5); /* Fundo semitransparente */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000; /* Garante que está sobreposto */
+}
+
+.popup-content {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  max-width: 400px;
+  width: 90%;
+}
+
+.popup-content h3 {
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+}
+
+.popup-actions {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.popup-actions button {
+  flex: 1;
+  padding: 10px 20px;
+  background-color: #415A77;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.popup-actions button:hover {
+  background-color: #778DA9;
+}
+
+.edit-button,
+.delete-button {
+  padding: 5px 15px;
+  margin: 5px;
+  font-size: 0.9rem;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.edit-button {
+  background-color: #4CAF50; /* Verde para o botão de editar */
+}
+
+.edit-button:hover {
+  background-color: #45A049; /* Efeito hover para o botão de editar */
+}
+
+.delete-button {
+  background-color: #f44336; /* Vermelho para o botão de deletar */
+}
+
+.delete-button:hover {
+  background-color: #d32f2f; /* Efeito hover para o botão de deletar */
+}

@@ -1,0 +1,92 @@
+.submit-button {
+  position: absolute; /* Posiciona o botão em relação ao contêiner pai */
+  bottom: 20px; /* Ajusta a distância do botão até a parte inferior */
+  right: 20px; /* Define a distância do botão até a borda direita */
+  padding: 10px 15px;
+  font-size: 1rem;
+  color: #fff;
+  background-color: #415A77; /* Cor do botão */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+  transition: background-color 0.3s ease;
+  width: 200px; /* Tamanho fixo para o botão */
+}
+
+/* Adicionando espaçamento no contêiner pai */
+.form-cadastro {
+  position: relative; /* Torna o contêiner base para o botão absoluto */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #E0E1DD; /* Fundo leve para o formulário */
+  padding: 20px;
+  padding-bottom: 60px; /* Espaçamento extra na parte inferior */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para destacar o formulário */
+  width: 80%; /* Ajuste a largura do formulário */
+  margin: 0 auto; /* Centraliza horizontalmente */
+}
+
+.submit-button:hover {
+  background-color: #778DA9; /* Cor ao passar o mouse */
+}
+
+/* Estilo da tabela de cadastro */
+.cadastro-aluno-table {
+  width: 100%; /* Ajusta a largura da tabela ao formulário */
+  border-collapse: collapse;
+  margin-bottom: 20px;
+  background-color: #ffffff; /* Fundo branco para a tabela */
+  color: #333; /* Cor do texto na tabela */
+}
+
+/* Estilo para as células */
+.cadastro-aluno-table th,
+.cadastro-aluno-table td {
+  border: 1px solid #ddd;
+  padding: 12px;
+  text-align: left;
+  vertical-align: middle;
+  font-size: 0.9rem; /* Tamanho de fonte menor */
+  font-family: 'Arial', sans-serif;
+}
+
+/* Cabeçalho da tabela */
+.cadastro-aluno-table th {
+  background-color: #f2f2f2; /* Cor de fundo clara para o cabeçalho */
+  color: #333; /* Cor do texto no cabeçalho */
+  font-weight: bold;
+  width: 40%; /* Ajuste de largura dos rótulos */
+}
+
+/* Cor das linhas pares */
+.cadastro-aluno-table tr:nth-child(even) {
+  background-color: #f9f9f9; /* Cor clara para linhas pares */
+}
+
+/* Efeito de hover */
+.cadastro-aluno-table tr:hover {
+  background-color: #f1f1f1; /* Destaque ao passar o mouse */
+}
+
+/* Estilo dos inputs */
+.cadastro-aluno-table input[type="text"],
+.cadastro-aluno-table input[type="date"] {
+  width: 100%; /* Ocupa toda a célula */
+  padding: 8px;
+  font-size: 0.9rem;
+  border: 1px solid #E0E1DD;
+  border-radius: 4px;
+  box-sizing: border-box; /* Garante o tamanho correto com padding */
+}
+
+/* Título */
+.content h2 {
+  color: #000000;
+  font-family: 'Alata', sans-serif;
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  margin-left: 35px;
+}

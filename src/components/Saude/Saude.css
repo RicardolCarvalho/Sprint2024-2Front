@@ -1,0 +1,66 @@
+/* Estilos para o container geral de Saúde (contendo a coluna lateral e conteúdo principal) */
+.saude-container {
+  display: flex;
+  flex-direction: column; /* Organiza os elementos verticalmente */
+  justify-content: center; /* Centraliza verticalmente */
+  align-items: center; /* Centraliza horizontalmente */
+  height: 100vh; /* Garante que ocupe toda a altura da tela */
+  background-color: #f0f0f0; /* Cor de fundo clara, igual ao perfil do aluno */
+  overflow-y: auto; /* Permite rolagem se necessário */
+  width: 85%; /* Aumenta a largura para 85% da tela */
+  margin: 0 auto; /* Centraliza horizontalmente */
+  margin-left: 270px; /* Deslocamento para a direita, alinhando com a coluna lateral */
+}
+
+/* Estilos para o conteúdo do container de saúde */
+.saude-header {
+  text-align: left; /* Alinha o texto à esquerda */
+  margin-bottom: 20px;
+  width: 80%; /* Limita a largura do cabeçalho */
+  max-width: 800px; /* Limita o tamanho máximo */
+  margin: 0 auto; /* Centraliza horizontalmente */
+  padding-left: 20px; /* Espaço à esquerda */
+}
+
+.saude-titulo {
+  font-size: 1.5rem;
+  color: #333; /* Cor escura para o título, igual ao perfil do aluno */
+  text-align: left; /* Alinha o texto à esquerda */
+  margin: 0;
+}
+
+/* Estilos para os botões de Saúde */
+.saude-button {
+  font-size: 1.2rem;
+  color: #fff;
+  background-color: #415A77; /* Azul escuro, igual ao estilo do perfil do aluno */
+  padding: 15px 25px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+  width: 60%;
+}
+
+.saude-button:hover {
+  background-color: #006699; /* Cor ao passar o mouse */
+  transform: scale(1.05);
+  transition: 0.3s ease;
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+  .saude-container {
+    width: 90%; /* Para telas menores, ocupa mais espaço da tela */
+    margin-left: 5%; /* Adiciona deslocamento à direita */
+  }
+
+  .saude-button {
+    width: 80%; /* Botões ocupam mais largura em telas menores */
+  }
+
+  .saude-header {
+    width: 90%; /* Ajusta a largura do cabeçalho */
+  }
+}

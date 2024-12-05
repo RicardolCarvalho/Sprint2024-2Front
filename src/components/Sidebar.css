@@ -1,0 +1,114 @@
+/* Importação da fonte local */
+@font-face {
+  font-family: 'Carme';
+  src: url('../font/Carme/Carme-Regular.ttf') format('truetype');
+}
+
+/* Sidebar */
+.sidebar {
+  width: 250px;
+  height: 100vh;
+  background-color: #415A77; /* Azul escuro */
+  color: #E0E1DD;
+  padding: 20px;
+  position: fixed;
+  left: 0;
+  top: 0;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); /* Sombra leve */
+  display: flex;
+  flex-direction: column; /* Organiza os itens verticalmente */
+}
+
+/* Espaçamento entre os itens do menu */
+.menu-item {
+  margin-bottom: 0px;
+}
+
+/* Links do menu */
+.menu-link {
+  text-decoration: none; /* Remove o sublinhado */
+  color: #E0E1DD; /* Branco */
+  font-family: 'Carme', sans-serif; /* Fonte Carme */
+  font-size: 1.1rem;
+  display: flex; /* Para alinhar ícone e texto */
+  align-items: center; /* Centraliza o ícone verticalmente com o texto */
+  padding: 10px 15px;
+  border-radius: 5px; /* Bordas arredondadas */
+  transition: background-color 0.3s ease, color 0.3s ease; /* Animação suave */
+}
+
+/* Ícones no menu */
+.menu-link img.icon {
+  width: 24px; /* Largura do ícone */
+  height: 24px; /* Altura do ícone */
+  margin-right: 10px; /* Espaço entre o ícone e o texto */
+}
+
+/* Estado hover: muda a cor ao passar o mouse */
+.menu-link:hover {
+  background-color: #778DA9; /* Azul claro */
+  color: #FFFFFF; /* Texto branco */
+}
+
+/* Estado ativo: link selecionado */
+.menu-link.active {
+  background-color: #778DA9; /* Azul claro */
+  color: #FFFFFF; /* Texto branco */
+  font-weight: bold; /* Destaca o texto */
+}
+
+/* Ajuste para o botão de "Voltar" */
+.menu-item button.menu-link {
+  all: unset; /* Remove os estilos padrão do botão */
+  background-color: #415A77; /* Fundo inicial igual aos outros itens */
+  color: #E0E1DD; /* Cor inicial do texto */
+  text-decoration: none; /* Remove sublinhado */
+  font-family: 'Carme', sans-serif; /* Fonte Carme */
+  font-size: 1.1rem; /* Tamanho da fonte */
+  display: flex; /* Alinha ícone e texto */
+  align-items: center; /* Centraliza verticalmente */
+  padding: 10px 15px; /* Espaçamento interno */
+  border-radius: 5px; /* Bordas arredondadas */
+  transition: background-color 0.3s ease, color 0.3s ease; /* Animação suave */
+  cursor: pointer; /* Cursor de botão */
+  box-shadow: 0px 0px 0px transparent; /* Remove borda clara */
+}
+
+/* Ajuste para o ícone do botão */
+.menu-item button.menu-link img.icon {
+  width: 24px; /* Tamanho do ícone */
+  height: 24px; /* Altura do ícone */
+  margin-right: 10px; /* Espaçamento entre ícone e texto */
+}
+
+/* Estado hover: muda a cor ao passar o mouse */
+.menu-item button.menu-link:hover {
+  background-color: #778DA9; /* Cor de fundo ao passar o mouse */
+  color: #FFFFFF; /* Cor do texto ao passar o mouse */
+}
+
+/* Estado ativo */
+.menu-item button.menu-link.active {
+  background-color: #778DA9; /* Fundo para estado ativo */
+  color: #FFFFFF; /* Cor do texto ativo */
+  font-weight: bold; /* Texto em negrito */
+}
+
+/* Ajuste para dispositivos móveis */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 100%; /* A Sidebar ocupa a largura total da tela */
+    height: auto; /* Ajusta a altura automaticamente */
+    position: relative; /* Deixa de ser fixa */
+    box-shadow: none; /* Remove a sombra */
+  }
+
+  .menu-link {
+    justify-content: center; /* Centraliza ícone e texto */
+    padding: 10px 0; /* Ajusta o espaçamento interno */
+  }
+
+  .menu-link img.icon {
+    margin-right: 0; /* Remove o espaço entre ícone e texto */
+  }
+}

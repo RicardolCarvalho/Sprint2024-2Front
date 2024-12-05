@@ -1,0 +1,14 @@
+/* Estilo básico para redefinir margens e paddings */
+* {
+  margin: 0;
+  padding: 0;
+  /* box-sizing: border-box; */
+}
+
+/* Estilo global para o corpo da página */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #ffffff; /* Cor de fundo suave */
+  color: #000000; /* Texto em cinza escuro */
+  line-height: 1.6; /* Altura da linha para melhor legibilidade */
+}

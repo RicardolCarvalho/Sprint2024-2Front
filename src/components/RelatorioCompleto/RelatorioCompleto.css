@@ -1,0 +1,125 @@
+/* Container principal do relatório */
+.relatorio-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  background-color: #ffffff; /* Fundo claro */
+  min-height: 100vh; /* Altura total da página */
+}
+
+/* Conteúdo principal */
+.relatorio-content {
+  background-color: #e0e1dd; /* Fundo claro */
+  border-radius: 8px;
+  padding: 20px;
+  width: 80%; /* Largura ajustada */
+  max-width: 1200px; /* Aumentado para mais espaço */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  overflow: hidden; /* Garante que conteúdo não extrapole */
+}
+
+/* Cabeçalho do relatório */
+.relatorio-content h2 {
+  font-size: 1.8rem;
+  color: #000000;
+  font-family: "Alata", sans-serif; /* Fonte Alata */
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.relatorio-content h3 {
+  font-size: 1.2rem;
+  color: #000000;
+  font-family: "Alata", sans-serif; /* Fonte Alata */
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Seções de subtítulos */
+.relatorio-content h4 {
+  font-size: 1rem;
+  font-family: "Alata", sans-serif; /* Fonte Alata */
+  color: #000000;
+  margin-bottom: 10px;
+  margin-top: 20px;
+}
+
+/* Bloco de informações formatadas */
+.relatorio-content pre {
+  background-color: #ffffff; /* Fundo branco para destaque */
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  font-size: 0.9rem;
+  font-family: "Carme", sans-serif; /* Fonte Carme */
+  color: #000000;
+  white-space: pre-wrap; /* Quebra de linha automática */
+  word-wrap: break-word; /* Quebra palavras longas */
+  margin-bottom: 20px;
+}
+
+/* Tabela de informações */
+.dados-aluno-tabela,
+.dados-perguntas-tabela {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  font-size: 14px;
+}
+
+.dados-aluno-tabela th,
+.dados-aluno-tabela td,
+.dados-perguntas-tabela th,
+.dados-perguntas-tabela td {
+  border: 1px solid #ddd; /* Bordas simples */
+  padding: 10px;
+  text-align: left;
+  font-family: Arial, sans-serif; /* Fonte simples */
+  color: #333333;
+}
+
+.dados-aluno-tabela th,
+.dados-perguntas-tabela th {
+  background-color: #f1f1f1; /* Fundo cinza claro */
+  font-weight: bold;
+  text-transform: capitalize; /* Texto em maiúsculas para cabeçalhos */
+}
+
+.dados-aluno-tabela tr:nth-child(even),
+.dados-perguntas-tabela tr:nth-child(even) {
+  background-color: #f9f9f9; /* Fundo alternado para legibilidade */
+}
+
+.dados-aluno-tabela tr:hover,
+.dados-perguntas-tabela tr:hover {
+  background-color: #eaeaea; /* Destaque ao passar o mouse */
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .relatorio-content {
+    width: 95%; /* Ajusta a largura em telas menores */
+    padding: 15px;
+  }
+
+  .relatorio-content h2 {
+    font-size: 1.5rem;
+  }
+
+  .relatorio-content h3 {
+    font-size: 1rem;
+  }
+
+  .relatorio-content h4 {
+    font-size: 0.9rem;
+  }
+
+  .dados-aluno-tabela th,
+  .dados-aluno-tabela td,
+  .dados-perguntas-tabela th,
+  .dados-perguntas-tabela td {
+    font-size: 12px; /* Reduz tamanho da fonte para telas menores */
+    padding: 8px;
+  }
+}

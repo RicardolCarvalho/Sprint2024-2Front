@@ -1,0 +1,113 @@
+.laudos-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0; /* Fundo claro */
+    overflow-y: auto; /* Permite rolagem se necessário */
+    width: 70%; /* Diminui para 70% da largura da tela */
+    margin: 0 auto; /* Centraliza horizontalmente */
+    margin-left: 270px; /* Deslocamento para a direita */
+    padding: 20px;
+    max-width: 800px; /* Limita o tamanho máximo */
+    background-color: #f9f9f9; /* Fundo do container */
+    border-radius: 8px; /* Bordas arredondadas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    margin-left: 500px;
+}
+
+  
+/* Seção de upload */
+.upload-section {
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+/* Controles de upload (input e botões) */
+.upload-controls {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: flex-start; /* Não muda, pois o conteúdo dos controles deve continuar alinhado à esquerda */
+  }
+  
+/* Estilo do campo de input de RA */
+.ra-input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+  }
+  
+/* Botão de upload */
+.upload-button {
+    padding: 10px 20px;
+    background-color: #0066cc;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+.upload-button:hover {
+    background-color: #004d99;
+  }
+  
+/* Botão de submissão */
+.upload-submit {
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+.upload-submit:hover {
+    background-color: #218838;
+  }
+  
+/* Seção de informações do aluno */
+.aluno-info {
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: #415A77; /* Azul */
+    border-radius: 4px;
+    color: white;
+  }
+  
+/* Lista de laudos */
+.laudos-list {
+    margin-top: 20px;
+  }
+  
+.laudos-list ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+.laudos-list li {
+    padding: 8px 0;
+    border-bottom: 1px solid #ddd;
+  }
+  
+/* Novo container azul abaixo dos botões */
+.container-azul {
+    width: 100%;
+    padding: 20px;
+    background-color: #415A77; /* Azul */
+    border-radius: 8px; /* Bordas arredondadas */
+    color: white;
+    text-align: left; /* Mantém o texto à esquerda dentro do container */
+    margin-top: 20px;
+  }
+  
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+    .laudos-container {
+      width: 90%; /* Para telas menores, ocupa mais espaço da tela */
+      margin-left: auto; /* Alinha a container para a direita também em telas pequenas */
+      margin-right: auto;
+    }
+  }

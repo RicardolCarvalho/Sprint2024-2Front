@@ -1,0 +1,142 @@
+/* Importação das fontes */
+@font-face {
+font-family: 'Alata';
+src: url('../../font/Alata/Alata-Regular.ttf') format('truetype');
+}
+
+@font-face {
+font-family: 'Carme';
+src: url('../../font/Carme/Carme-Regular.ttf') format('truetype');
+}
+
+/* Posiciona o título no canto superior esquerdo */
+.top-left-title {
+position: absolute;
+top: 20px;
+left: 20px;
+font-family: 'Alata', sans-serif;
+font-size: 1.5rem;
+color: #FFFFFF; /* Branco */
+background-color: #415A77; /* Azul escuro */
+padding: 10px 20px;
+border-radius: 8px; /* Bordas arredondadas */
+box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra leve */
+}
+
+/* Página do login */
+.login-page {
+display: flex;
+justify-content: center;
+align-items: center;
+height: 100vh;
+background-color: #FFFFFF; /* Fundo branco */
+position: relative; /* Para o título absoluto funcionar */
+overflow: hidden; /* Evita rolagem se necessário */
+}
+
+/* Container principal */
+.login-container {
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+}
+
+/* Formulário */
+.form-container {
+background-color: #778DA9; /* Azul médio */
+padding: 100px;
+border-radius: 8px;
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+width: 90%;
+max-width: 400px;
+text-align: center;
+}
+
+.form-container h2 {
+font-family: 'Alata', sans-serif;
+color: #FFFFFF; /* Branco */
+margin-bottom: 30px;
+}
+
+.input-container {
+margin-bottom: 20px;
+text-align: left;
+}
+
+.input-container label {
+display: block;
+font-size: 1.5rem;
+color: #FFFFFF; /* Branco */
+margin-bottom: 5px;
+}
+
+.input-container input {
+width: 100%;
+padding: 10px;
+font-size: 1rem;
+border: 1px solid #E0E1DD; /* Borda cinza claro */
+border-radius: 5px;
+background-color: #E0E1DD; /* Fundo cinza claro */
+font-family: 'Carme', sans-serif;
+color: #415A77; /* Texto azul escuro */
+}
+
+.input-container input::placeholder {
+color: #E0E1DD; /* Cor do placeholder */
+}
+
+.input-container input:focus {
+outline: none;
+border: 1px solid #415A77; /* Destaque da borda */
+}
+
+.button-container {
+margin-top: 2px;
+}
+
+button.submit {
+width: 100%;
+padding: 10px;
+font-size: 1rem;
+font-family: 'Carme', sans-serif;
+color: #FFFFFF; /* Branco */
+background-color: #415A77; /* Azul escuro */
+border: none;
+border-radius: 5px;
+cursor: pointer;
+transition: background-color 0.3s ease;
+}
+
+button.submit:hover {
+background-color: #778DA9; /* Azul médio */
+}
+
+/* Mensagem de erro */
+.error-message {
+color: #FF0000; /* Vermelho */
+font-size: 0.9rem;
+margin-bottom: 15px;
+text-align: center;
+}
+
+/* Responsividade */
+@media (max-width: 480px) {
+.top-left-title {
+    font-size: 1.2rem;
+    padding: 8px 15px;
+}
+
+.form-container {
+    padding: 20px;
+}
+
+.input-container input {
+    padding: 8px;
+}
+
+button.submit {
+    padding: 8px;
+    font-size: 0.9rem;
+}
+}

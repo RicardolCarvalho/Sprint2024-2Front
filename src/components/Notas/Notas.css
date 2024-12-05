@@ -1,0 +1,38 @@
+.notas-container {
+  display: flex;
+  height: 100vh;
+}
+
+.notas-wrapper {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.notas-content {
+  max-width: 800px;
+  width: 100%;
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.tabela-notas {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.tabela-notas th,
+.tabela-notas td {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+.tabela-notas th {
+  background-color: #f4f4f4;
+  text-align: left;
+}

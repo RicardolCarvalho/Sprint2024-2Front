@@ -1,0 +1,85 @@
+/* Botão de envio */
+.submit-button {
+  position: absolute; /* Posiciona o botão em relação ao contêiner pai */
+  bottom: 20px; /* Ajusta a distância do botão até a parte inferior */
+  right: 20px; /* Define a distância do botão até a borda direita */
+  padding: 10px 15px;
+  font-size: 1rem;
+  color: #fff;
+  background-color: #415A77; /* Cor do botão */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+  transition: background-color 0.3s ease;
+  width: 200px; /* Tamanho fixo para o botão */
+}
+
+.submit-button:hover {
+  background-color: #778DA9; /* Cor ao passar o mouse */
+}
+
+/* Tabela do Cadastro de Professor */
+.cadastro-professor-table {
+  width: 100%; /* Ajusta a largura da tabela ao formulário */
+  border-collapse: collapse;
+  margin-bottom: 20px;
+  background-color: #ffffff; /* Fundo branco para a tabela */
+  color: #333; /* Cor do texto na tabela */
+}
+
+.cadastro-professor-table th,
+.cadastro-professor-table td {
+  border: 1px solid #ddd;
+  padding: 12px;
+  text-align: left;
+  vertical-align: middle;
+  font-size: 0.9rem; /* Tamanho de fonte menor */
+  font-family: 'Carme', sans-serif; /* Aplica a fonte Carme para o conteúdo */
+}
+
+.cadastro-professor-table th {
+  background-color: #f2f2f2; /* Cor de fundo clara para o cabeçalho */
+  color: #333; /* Cor do texto no cabeçalho */
+  font-weight: bold;
+  width: 40%; /* Ajuste de largura dos rótulos */
+}
+
+/* Estilo dos inputs e selects */
+.cadastro-professor-table input[type="text"],
+.cadastro-professor-table select {
+  width: 100%; /* Ocupa toda a célula */
+  padding: 8px;
+  font-size: 0.9rem;
+  border: 1px solid #E0E1DD;
+  border-radius: 4px;
+  box-sizing: border-box; /* Garante o tamanho correto com padding */
+  font-family: 'Carme', sans-serif; /* Fonte Carme para os campos de entrada */
+}
+
+/* Título do Formulário */
+.content h2 {
+  color: #000000;
+  font-family: 'Alata', sans-serif; /* Fonte Alata para o título */
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .submit-button {
+    width: 150px; /* Ajusta a largura do botão em telas menores */
+    font-size: 0.9rem;
+    padding: 8px 12px;
+  }
+
+  .content h2 {
+    font-size: 1.5rem; /* Ajusta o tamanho do título */
+  }
+
+  .cadastro-professor-table th,
+  .cadastro-professor-table td {
+    font-size: 0.8rem; /* Reduz o tamanho da fonte para telas menores */
+  }
+}
